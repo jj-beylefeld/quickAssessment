@@ -8,6 +8,6 @@ namespace KCSAssesment.Classes.Implementations
 {
     public class Food : ExemptItem, IItem
     {
-        public Food(string itemName) : base(itemName) { };
+        public Food(string itemName) : base(itemName) { }
     }
 }
