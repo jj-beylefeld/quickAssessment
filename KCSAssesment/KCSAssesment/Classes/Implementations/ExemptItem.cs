@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using KCSAssesment.Classes;
 
 namespace KCSAssesment.Classes.Implementations
 {
@@ -16,6 +17,13 @@ namespace KCSAssesment.Classes.Implementations
             this.itemName = itemName;
         }
 
+        public ExemptItem(string itemName, bool isImported, double purchasePrice)
+        {
+            this.itemName = itemName;
+            this.isImported = isImported;
+            this.purchasePrice = purchasePrice;
+        }
+
         public double getCostPrice()
         {
             return purchasePrice - getSalesTax();
@@ -27,7 +35,7 @@ namespace KCSAssesment.Classes.Implementations
 
         public double getImportTax()
         {
-            return Math.Round((isImported ? purchasePrice * 0.05 : 0),6);
+            return Math.Round((isImported ? purchasePrice * TaxInfo.ImportDutyTaxRate : 0),2);
         }
         public double getTotalTax()
         {
