@@ -40,7 +40,7 @@ namespace KCSAssesmentTests
             book.purchasePrice = 199.99;
             book.isImported = true;
 
-            Assert.Equal(9.9995, book.getImportTax());
+            Assert.Equal(10, book.getImportTax());
         }
         [Fact]
         public void importedBookItemTotalTaxIsImportTax()
@@ -49,8 +49,8 @@ namespace KCSAssesmentTests
             book.purchasePrice = 199.99;
             book.isImported = true;
 
-            Assert.Equal(9.9995, book.getImportTax());
-            Assert.Equal(9.9995, book.getTotalTax());
+            Assert.Equal(10, book.getImportTax());
+            Assert.Equal(10, book.getTotalTax());
             Assert.Equal(book.getImportTax(), book.getTotalTax());
         }
 

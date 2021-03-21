@@ -10,6 +10,8 @@ namespace KCSAssesment.Classes.Interfaces
         public string itemName { get; set; }
         public bool isImported { get; set; }
         public double purchasePrice { get; set; }
+        public int quantity { get; set; }
+        public double finalPrice { get; }
         
         public double getCostPrice();
         public double getSalesTax();

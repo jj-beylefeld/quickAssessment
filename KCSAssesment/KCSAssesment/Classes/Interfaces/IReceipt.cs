@@ -7,6 +7,6 @@ namespace KCSAssesment.Classes.Interfaces
 {
     public interface IReceipt
     {
-        public void print(ICart cart);
+        public string print(ICart cart);
     }
 }
